@@ -15,7 +15,7 @@ const toggleClass = (i,toggle) => {
 };
 
 //1 - select DOM to bind data to
-const divSelection = d3.select('#viz')
+const divSelection = d3.select('div#viz')
 divSelection.selectAll('div')
     //2 - bind daly data to selection (placeholder phase) {{the current divs are hypothetical placeholders, not actual DOM els}}
     .data(climate_daly_data)
@@ -27,8 +27,16 @@ divSelection.selectAll('div')
     //5 - use data to customize width of bars
     .style(
         'width',
-        d => `${d.deaths * 25}px`
+        d => `${d.deaths * 20}px`
     )
 
 
+//5 - create legend list
+const listSelection = d3.select('ol#legend')
+listSelection.selectAll('li')
+    .data(climate_daly_data)
+    .enter()
+    .append('li')
+    //6 - add text to generate list items
+    .text(d => `${d.region}: ${d.deaths}`)
 

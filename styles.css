@@ -9,6 +9,10 @@ h3 {
     color: #0769ad;
 }
 
+ol{
+    list-style-type: none;
+}
+
 li{
     cursor: pointer;
 }

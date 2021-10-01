@@ -36,10 +36,10 @@ listSelection.selectAll('li')
 //7 - select both the bar chart and the corresponding legend element with d3 by 
 //accessing the nth child of both the #legend and #viz elements. 
 //use the .classed() method to remove and apply the styles to the corresponding elements
-const toggleClass = (i,toggle) => {
-    d3.select('#viz div:nth-child('+ i +')').classed('highlightBar',toggle)
-    d3.select('#legend li:nth-child('+ i +')').classed('highlightText',toggle)
-}
+// const toggleClass = (i,toggle) => {
+//     d3.select('#viz div:nth-child('+ i +')').classed('highlightBar',toggle)
+//     d3.select('#legend li:nth-child('+ i +')').classed('highlightText',toggle)
+// }
 
 // listSelection.on(
 //     'mouseover',
@@ -52,6 +52,7 @@ const toggleClass = (i,toggle) => {
 
 //**** due to 'breaking change 'in the D3 library code for events, the above don't work so let's go old school on dat ass
 
+//7
 //querySelector().children returns a HTMLCollection Object, NOT an Array, so indexOf doesn't work
 //so copy data from the HTMLCollection Object to arrays
 const listItems = [],
